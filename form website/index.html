@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+	$( function() {
+
+		$(".Accordion").accordion();
+		$("#title").autocomplete({
+			source: ["Mr",
+			        "Mrs"]
+
+		});
+		$("#gender").autocomplete({
+			source: ["Male",
+			        "Female",
+			        "None"]	
+
+		});	
+
+        $(".button").button;
+        $( ".gender" ).checkboxradio();
+        $( "checkbox" ).checkboxradio();
+        $( "#bday").datepicker();
+        $( "#submit" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+
+
+
+	});
+</script>
+
+</head>
+<header></header>
+<body>
+<form method="POST" action="submit.php">
+<div class="Accordion">
+<h2>Personal Information</h2>
+
+<div>
+	<label for="title" >Title:</label>
+  <input id="title" class="label"><br/>
+
+  <label for="firstName " >First name:</label>
+  <input type="text" name="firstName" id="firstName" class="label"><br/>
+
+
+  <label for="middleName" >Middle Name:</label>
+  <input type="text" name="middleName" id="middleName" class="label"><br/>
+
+
+  <label for="lastName" >Last Name:</label>
+  <input type="text" name="lastName" id="lastName" class="label"> <br/>
+
+</div>
+  
+<h2>Bio Information</h2>
+<div>
+	 <li class="gender">Gender:
+  
+    <label for="radio-1">Male</label>
+    <input type="radio" name="radio-1" id="radio-1">
+    <label for="radio-2">Female</label>
+    <input type="radio" name="radio-1" id="radio-2">
+    <label for="radio-3">None</label>
+    <input type="radio" name="radio-1" id="radio-3">
+    
+   </li> 
+    <br/>
+
+<p>Birthday:<input type="text" id="bday" class="label"></p> <br/>
+
+</div>
+  
+<h2>Contact Information</h2>
+<div>
+	<label for="num" id=>Contact Number:</label>
+  <input type="text" name="num" id="num" class="label"><br/>
+</div>
+    
+<h2>User Information</h2>
+<div>
+	    <label for="pass" >Pass Word:</label>
+  <input type="text" name="pass" id="pass" class="label"><br/>
+
+</div>
+
+
+
+
+</div>
+
+<input type="checkbox" name="checkbox" id="checkbox">
+<label for="checkbox">I have gave all the information correctly </label>
+      
+
+
+
+</form>
+</body>
+<footer>
+<button class="button">Cancel</button>
+
+<button id="submit">Submit</button>
+</footer>
+
+</html>
